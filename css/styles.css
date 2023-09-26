@@ -1,0 +1,322 @@
+
+/* *********** HEADER ********* */
+.header {
+    border-bottom: 1px solid #E7E9FC;
+}
+.header-container {
+    display: flex;
+}
+.navigation {
+    display: flex;
+    align-items: center;
+} 
+.logo {    
+    color: #4D5AE5;
+    font-family: "Raleway", sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 1.17;
+    letter-spacing: 0, 013em;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    margin-right: 76px;      
+}
+.logo-text {
+    color: var(--title-color);      
+}
+ .header-menu-list {    
+    display: flex;    
+    gap: 40px;     
+}
+.header-item {
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
+.header-link {
+        color: var(--title-color);
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 1.5;
+        letter-spacing: 0.02em;
+        padding-top: 24px;
+        padding-bottom: 24px;
+}
+.header-link:hover,
+.header-link:focus {
+    color: #404bbf;
+}
+.contact {   
+    text-decoration: none;
+    margin-left: 330px;   
+}
+.header-socials {    
+    display: flex;    
+     gap: 40px;   
+}
+.header-social {
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
+.header-social-link{
+
+    padding-top: 24px;
+    padding-bottom: 24px;
+    font-style: normal;
+}
+.header-social-link:hover,
+.header-social-link:focus {
+    color: #404bbf;
+}
+
+/* *************** HERO studio ********* */
+.hero-img {   
+   padding: 188px 0;
+   background-color: var(--bakgr-footer);      
+}
+.container-text {
+    display: flex; 
+    flex-direction: column;      
+    align-items: center;     
+}
+.hero-business { 
+        max-width: 496;
+        color: var(--title-one);
+        text-align: center;
+        font-size: 56px;        
+        font-weight: 700;
+        line-height: 1.07;
+        letter-spacing: 0.02em;  
+        max-width: 496px;      
+}
+.hero-img-btn {
+    background-color: var(--accent-color);
+    color: var(--title-one);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    min-width: 170px;
+    min-height: 56px; 
+    margin-top: 48px;  
+    min-width: 169px;
+    border-radius: 4px;
+}
+.hero-img-btn:hover,
+.hero-img-btn:focus {
+     background-color:var(--backgr-btn);
+}
+
+/* *************** CONTENT Web Studio ********* */
+.description {
+    padding: 120px 0;
+}
+.description-list {
+    display: flex;
+    gap: 24px;
+}
+.description-item {
+    width: calc((100% - 72px) / 4);
+}
+.description-title {
+    color: var(--title-color);
+    font-family: var(--font-main);
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    margin-bottom: 8px;
+}
+.description-text {
+    color: var(--text-color);
+    font-family: var(--font-main);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    margin-top: 8px;
+}
+
+.doing {
+    padding-bottom: 120px;
+}
+
+.doing-container {}
+
+.doing-title {
+    color: var(--title-color);
+    text-align: center;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.11;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+    margin-bottom: 72px;
+}
+
+.doing-list {
+    display: flex;
+    gap: 24px;    
+}
+
+.doing-item {
+width: calc((100% - 48px) / 3);
+}
+
+.team {
+    padding: 120px 0;
+    background-color: var(--text-footer);
+}
+.container-team {}
+
+.team-title {
+    color: var(--title-color);
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.11;
+    text-align: center;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+    margin-bottom: 72px;
+}
+
+.team-list {
+    display: flex;
+    gap: 24px;
+}
+
+.team-item {
+    width: calc((100% - 72px) / 4);
+    border-radius: 0px 0px 4px 4px;
+    background-color: var(--title-one);
+}
+.descript-blok {
+    padding: 32px 0;
+
+}
+.team-descript-title {
+    color: var(--title-color);
+    font-family: var(--font-main);
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: 0.02em;       
+    text-align: center;
+    margin-bottom: 8px;
+}
+.team-descript-text {
+    color: var(--text-color);
+    font-family: var(--font-main);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    margin-top: 8px;
+    text-align: center;
+}
+
+
+/* *************** HERO PORTOFOLIO ********* */
+.hero-menu {
+    padding-top: 96px;
+    padding-bottom: 120px;
+}
+ .container-menu { 
+}
+.hero-list {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin-bottom: 72px;
+}
+.hero-item {}
+
+.hero-btn {
+    font-family: var(--font-main);
+    color: var(--accent-color);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    background-color: var(--text-footer);
+    padding: 12px 24px;
+    border-radius: 4px;
+    border: 1px solid #e7e9fc;
+}
+.hero-btn:hover,
+.hero-btn:focus {
+    color: var(--title-one);
+    background: var(--backgr-btn);
+    border: 1px solid transparent;
+}
+
+/* *************** CONTENT PORTOFOLIO ********* */
+
+.content-list {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 48px;
+    column-gap: 24px;
+}
+
+.content-item { 
+    width: calc((100% - 48px) / 3);        
+}
+.content-link {}
+.card {
+    padding: 32px 16px;
+    border: 1px solid #e7e9fc;
+    border-top: none;
+}
+
+.subject {
+    font-family:var(--font-main);
+    color: var(--title-color);
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.2; 
+    letter-spacing: 0.02em;
+    margin-bottom: 8px;
+}
+.direct {
+   color: var(--text-color); 
+    font-family: var(--font-main);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+}
+
+/* *************** FOOTER ********* */
+
+.footer {
+padding: 100px 0;
+background-color: var(--bakgr-footer);
+}
+.footer-container {}
+.logo-ff {
+    color: #4D5AE5;
+    font-family: "Raleway", sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 1.17;
+    letter-spacing: 0, 013em;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;    
+    display: inline-block;
+    margin-bottom: 16px;   
+}
+.logo-footer {
+    display: inline-block;
+    color: var(--text-footer);    
+}
+.footer-text {
+     color:var(--text-footer); 
+    max-width: 264px;  
+}
+
+ 
