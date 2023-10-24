@@ -71,12 +71,16 @@
 }
 
 /* *************** HERO studio ********* */
-.hero-img {   
-   padding: 188px 0;
+.hero {   
+   /*  width: 1440px;
+    height: 600px;*/
    background-color: var(--bakgr-footer);
-    background-image: url(../images/people-office.jpg);     
+   background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/peopleoffice.jpg);
+   background-repeat: no-repeat;
+   background-size: cover;     
 }
 .container-text {
+    padding: 188px 0;
     display: flex; 
     flex-direction: column;     
     align-items: center;     
@@ -121,10 +125,15 @@
     width: calc((100% - 72px) / 4);
 }
 .descr-icons {
-    padding: 24px, 100px;
+    height: 112px;
     background-color: var(--text-footer);
-    fill: var(--text-color);
     border-radius: 4px;
+    margin-bottom: 8px;
+} 
+
+.descr-picture {
+    margin-top: 24px;
+    margin-left: 100px;
 }
 .description-title {
     color: var(--title-color);
@@ -227,8 +236,61 @@ width: calc((100% - 48px) / 3);
     gap: 24px;
     justify-content: center;
     align-items: center;
+    margin-top: 8px;
+}
+.team-icons-item {
+   width: 40px;
+   height: 40px;
+   border-radius: 20px;
+   background-color: var(--accent-color); 
+}
+.team-social {
+   display: flex;
+   margin: 12px;
+   fill: var(--text-footer);
+}
+
+/* *********** CUSTOERS ************ */
+.customers {
+   padding: 120px 0;
+}
+.customers-title {
+    color: var(--title-color);
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.11;
+    text-align: center;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+    margin-bottom: 72px;
+}
+.customers-list {
+    display: flex;
     gap: 24px;
 }
+.customers-item {
+    padding: 16px 32px;
+    width: 168px;
+    height: 88px;
+    border: 1px solid var(--customers-btn);
+}
+.customers-picture {
+    justify-content: center;
+    align-items: center;
+    fill: currentColor;
+}
+.customers-item:hover,
+.customers-item:focus {
+    color: #404bbf;
+}
+.customers-picture:hover,
+.customers-picture:focus {
+    fill: #404bbf;
+}
+/*.header-social-link:hover,
+.header-social-link:focus {
+    color: #404bbf;
+}*/
 
 /* *************** HERO PORTOFOLIO ********* */
 .hero-menu {
@@ -305,10 +367,19 @@ width: calc((100% - 48px) / 3);
 /* *************** FOOTER ********* */
 
 .footer {
-padding: 100px 0;
-background-color: var(--bakgr-footer);
+    padding: 100px 0;
+    background-color: var(--bakgr-footer);
 }
+
 .footer-container {}
+    
+
+.footer-block {
+    display: flex;
+    gap: 120px;
+}
+.footer-block-list {}
+
 .logo-ff {
     color: var(--accent-color);
     font-family: "Raleway", sans-serif;
@@ -330,27 +401,32 @@ background-color: var(--bakgr-footer);
      color:var(--text-footer); 
     max-width: 264px;  
 }
-
-
-
 .footer-media {
   color: var(--text-footer);
   font-weight: 500;  
 }
-.footer-icon {
-  padding: 8px;
-  background-color: var(--accent-color);
-  fill: var(--text-footer);  
-  border-radius: 50%;
-}
+
 .footer-link {
     display: flex;
     gap: 16px;
-}
+    margin-top: 16px;
+    padding-left: 0;    
+  }
 
 .footer-list {
-       
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--accent-color);
+ }
+.footer-icon {
+    display: flex;
+    margin: 8px;
+    fill: var(--text-footer);   
 }
 
+ 
+
+ 
 
  
