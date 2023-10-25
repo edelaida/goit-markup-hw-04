@@ -72,12 +72,13 @@
 
 /* *************** HERO studio ********* */
 .hero {   
-   /*  width: 1440px;
-    height: 600px;*/
+    max-width: 1440px;
+    height: 600px;
    background-color: var(--bakgr-footer);
    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/peopleoffice.jpg);
    background-repeat: no-repeat;
-   background-size: cover;     
+   background-size: cover; 
+   background-position: center;    
 }
 .container-text {
     padding: 188px 0;
@@ -113,7 +114,7 @@
      background-color:var(--backgr-btn);
 }
 
-/* *************** CONTENT Web Studio ********* */
+/* *************** DESCRIPTION Web Studio ********* */
 .description {
     padding: 120px 0;
 }
@@ -129,11 +130,13 @@
     background-color: var(--text-footer);
     border-radius: 4px;
     margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 } 
 
 .descr-picture {
-    margin-top: 24px;
-    margin-left: 100px;
+  
 }
 .description-title {
     color: var(--title-color);
@@ -153,7 +156,7 @@
     letter-spacing: 0.02em;
     margin-top: 8px;
 }
-
+/* *************** DOING Web Studio ********* */
 .doing {
     padding-bottom: 120px;
 }
@@ -180,9 +183,13 @@
 width: calc((100% - 48px) / 3);
 }
 
+/* *************** TEAM Web Studio ********* */
 .team {
     padding: 120px 0;
     background-color: var(--text-footer);
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+        0px 1px 1px rgba(46, 47, 66, 0.16),
+        0px 2px 1px rgba(46, 47, 66, 0.08);;
 }
 .container-team {}
 
@@ -231,23 +238,35 @@ width: calc((100% - 48px) / 3);
     margin-top: 8px;
     text-align: center;
 }
+
 .team-icons {
     display: flex;
     gap: 24px;
     justify-content: center;
     align-items: center;
-    margin-top: 8px;
+    margin-top: 8px;    
 }
 .team-icons-item {
    width: 40px;
-   height: 40px;
-   border-radius: 20px;
-   background-color: var(--accent-color); 
+   height: 40px;  
 }
-.team-social {
-   display: flex;
-   margin: 12px;
-   fill: var(--text-footer);
+.team-link {
+  width: 100%;
+  height: 100%;
+  background-color: var(--accent-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  color: var(--text-footer);
+}
+
+.team-social {   
+  fill: currentColor;
+}
+.team-link:hover,
+.team-link:focus {
+    background-color: #31d0aa;
 }
 
 /* *********** CUSTOERS ************ */
@@ -274,23 +293,22 @@ width: calc((100% - 48px) / 3);
     height: 88px;
     border: 1px solid var(--customers-btn);
 }
+.customers-link {
+    width: 100%;
+    height: 100%;    
+}
 .customers-picture {
     justify-content: center;
     align-items: center;
     fill: currentColor;
 }
-.customers-item:hover,
-.customers-item:focus {
-    color: #404bbf;
+
+.customers-link:hover,
+.customers-link:focus {
+    color: var(--accent-color);
+    border-color: var(--accent-color);
 }
-.customers-picture:hover,
-.customers-picture:focus {
-    fill: #404bbf;
-}
-/*.header-social-link:hover,
-.header-social-link:focus {
-    color: #404bbf;
-}*/
+ 
 
 /* *************** HERO PORTOFOLIO ********* */
 .hero-menu {
@@ -371,14 +389,14 @@ width: calc((100% - 48px) / 3);
     background-color: var(--bakgr-footer);
 }
 
-.footer-container {}
-    
-
-.footer-block {
+.footer-container {
     display: flex;
-    gap: 120px;
+    align-items: baseline;
 }
-.footer-block-list {}
+  
+.footer-block {
+   margin-right: 120px;
+}
 
 .logo-ff {
     color: var(--accent-color);
@@ -403,30 +421,55 @@ width: calc((100% - 48px) / 3);
 }
 .footer-media {
   color: var(--text-footer);
-  font-weight: 500;  
+  font-weight: 500;
+  font-size: 16px;  
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  margin-bottom: 16px;
 }
 
 .footer-link {
     display: flex;
     gap: 16px;
-    margin-top: 16px;
-    padding-left: 0;    
+    padding-left: 0;   
   }
 
 .footer-list {
     width: 40px;
-    height: 40px;
+    height: 40px; 
+ }
+ .footer-icons-link {
+    width: 100%;
+    height: 100%;
     border-radius: 50%;
     background-color: var(--accent-color);
- }
-.footer-icon {
     display: flex;
-    margin: 8px;
-    fill: var(--text-footer);   
+    align-items: center;
+    justify-content: center; 
+    color: var(--text-footer);
+ }
+ .footer-icon {   
+    fill: currentColor;
+ }
+
+ .footer-icons-link:hover,
+.footer-icons-link:focus {
+    background-color: #31d0aa;
 }
 
- 
+/* *************** MODAL ********* */
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  width: 417px;
+  min-height: 594px;
 
+  border-radius: 15px;
+  background: #E7E9FC;
+}
+ 
  
 
  
