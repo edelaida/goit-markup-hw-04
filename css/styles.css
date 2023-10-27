@@ -236,6 +236,9 @@ width: calc((100% - 48px) / 3);
     width: calc((100% - 72px) / 4);
     border-radius: 0px 0px 4px 4px;
     background-color: var(--title-one);
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+        0px 1px 1px rgba(46, 47, 66, 0.16),
+        0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 .descript-blok {
     padding: 32px 0;
@@ -313,21 +316,25 @@ width: calc((100% - 48px) / 3);
 }
 .customers-item {
     padding: 16px 32px;
-    width: 168px;
+    /*width: 168px;*/
+    width: calc((100% - 120px) / 6);
     height: 88px;
     border: 1px solid var(--customers-btn);
      
 }
 .customers-link {
-    display: flex;
     width: 100%;
-    height: 100%; 
-    justify-content: center;
-    align-items: center;
+    height: 100%;
+    
     border: 1px solid #8e8f99;
     border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: var(--customers-btn); 
-    border-color: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    /*border-color: 250ms cubic-bezier(0.4, 0, 0.2, 1);*/
 }
 .customers-picture {     
     fill: currentColor;
@@ -335,12 +342,12 @@ width: calc((100% - 48px) / 3);
 .customers-link:hover {
     color: #404bbf;    
     border-color: #404bbf;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    /*transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);*/
 }
 .customers-link:focus {
      color: #404bbf;
      border-color: #404bbf;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1 );
+    /*transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1 );*/
 }
 
 /* *************** HERO PORTOFOLIO ********* */
@@ -369,12 +376,17 @@ width: calc((100% - 48px) / 3);
     padding: 12px 24px;
     border-radius: 4px;
     border: 1px solid #e7e9fc;
-}
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}    
 .hero-btn:hover,
 .hero-btn:focus {
     color: var(--title-one);
     background: var(--backgr-btn);
     border: 1px solid transparent;
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 /* *************** CONTENT PORTOFOLIO ********* */
@@ -388,15 +400,22 @@ width: calc((100% - 48px) / 3);
 
 .content-item { 
     width: calc((100% - 48px) / 3); 
-    overflow: hidden;       
+    overflow: hidden; 
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.content-link {}
+.content-link {
+    display: block;
+}
+.content-link:hover, 
+.content-link:focus {
+   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+}
 
 .content-wrapper {
     position: relative;
     overflow: hidden;
 }
-.overlay {
+/*.overlay {
    position: absolute;
    top: 0;
    left: 0;
@@ -409,15 +428,24 @@ width: calc((100% - 48px) / 3);
    align-items: center;
    justify-content: center;
    transition: transform 800ms ease-out;
-}
+}*/
 .overlay-text {
-   color: #F4F4FD;
-    
+   position: absolute;
+   top: 0;
+    padding: 40px 32px;
     font-weight: 400;
-    line-height: 1,5;
-    letter-spacing: 0.02me;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--text-footer);
+    background-color: #4d5ae5;
+    width: 100%;
+    height: 100%;
+    transform: translateY(100%);
 }
-.content-link:hover .overlay {
+.content-link:hover .overlay-text {
+    transform: translateY(0); 
+}
+.content-link:focus .overlay-text {
     transform: translateY(0);
 }
 .card {
@@ -533,8 +561,9 @@ z-index: 100;
 width: 100%;
 height: 100%;
 background-color: rgba(46, 47, 66, 0.40);
-backdrop-filter: blur(2px);
 transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+/*backdrop-filter: blur(2px);*/
 /*transition: opacity 200ms linear, visibility 200ms linear;*/
 }
 .is-hidden {
@@ -571,18 +600,18 @@ transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-b
     width: 24px;
     height: 24px;
     border-radius: 50%;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    background-color: #e7e9fc;
+    color: var(--text-color);
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--text-color);
-   padding: 0;
-   background-color: transparent;
-   /*border: none;*/
-   cursor: pointer; 
-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
-   transition: color 300ms ease;  
+    background-color: #e7e9fc;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 0;
+    cursor: pointer;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+   /*background-color: transparent;
+    border: none;
+    transition: color 300ms ease; */
 }
 .modal-btn:hover {
 background-color: #404bbf;
